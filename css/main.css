@@ -1,0 +1,135 @@
+:root {
+    --size-slot-code-row: 55px;
+    --size-slot-key-row: 20px;
+    --size-peg-code: 52px;
+    --size-peg-key: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* border: 1px solid black; */
+}
+
+body {
+    background-color: rgb(61, 56, 53);
+}
+
+.game-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-main {
+    display: flex;
+    gap: 20px;
+}
+
+.board {
+    background-color:slategrey;
+    background: linear-gradient(to top, slategrey 60%, rgb(12, 19, 27));
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    padding: 20px 10px;
+}
+
+.peg-bin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+
+.code-row {
+    display: flex;
+}
+
+.key-row {
+    display: flex;
+    align-items: center;
+}
+
+.peg--key {
+
+}
+
+.peg--code {
+    width: var(--size-peg-code);
+    height: var(--size-peg-code);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    cursor: pointer;
+}
+
+.code-row__slot {
+    width: var(--size-slot-code-row);
+    height: var(--size-slot-code-row);
+
+    background-color: darkslategrey;
+    background: radial-gradient(darkslategrey, rgb(24, 44, 44));
+    border-radius: 50%;
+    transform: scale(0.6);
+}
+
+.key-row__slot {
+    width: var(--size-slot-key-row);
+    height: var(--size-slot-key-row);
+
+    background-color: darkslategrey;
+    background: radial-gradient(darkslategrey, black);
+    border-radius: 50%;
+    transform: scale(0.4);
+}
+
+#secretCode {
+    transform: translateX(-75px);
+    opacity: 0;
+}
+
+.black {
+    background: radial-gradient(rgba(0, 0, 0, 0.527), black);
+}
+
+.blue {
+    background: radial-gradient(blue, black);
+}
+
+.purple {
+    background: radial-gradient(purple, black);
+}
+
+.green {
+    background: radial-gradient(green, black);
+}
+
+.orange {
+    background: radial-gradient(orange, black);
+}
+
+.red {
+    background: radial-gradient(red, black);
+}
+
+.white {
+    background: radial-gradient(white, black);
+}
+
+.yellow {
+    background: radial-gradient(yellow, black);
+}
+
+.active {
+    border: 3px solid red;
+}
+
+.hidden {
+    display: none;
+}
